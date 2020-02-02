@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="导航,搜索">
+    <meta name="description" content="一个简单的导航搜索页">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>简单导航</title>
+
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/thirty/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <div id="my-top">
+        <span id="clock"></span>
+    </div>
+    <!-- 主体 -->
+    <div id="my-body">
+        <div id="search-log">
+            <img src="./img/logo.png"/>
+        </div>
+        <div id="search-bar">
+            <img src="./img/search_icon/baidu.ico" />
+            <select>
+                <option value="https://www.baidu.com/s?wd={{word}}&from=enav" data-icon="./img/search_icon/baidu.ico">百度</option>
+                <option value="https://www.sogou.com/web?query={{word}}" data-icon="./img/search_icon/sougou.ico">搜狗</option>
+                <!-- <option>雅虎</option> -->
+                <option value="http://www.bing.com/search?q={{word}}" data-icon="./img/search_icon/bing.ico">必应</option>
+                <option value="http://www.google.com/search?q={{word}}" data-icon="./img/search_icon/google.ico">谷歌</option>
+                <option value="https://en.wikipedia.org/wiki/Special:Search/{{word}}" data-icon="./img/search_icon/wiki.ico">维基百科</option>
+            </select>
+            <input type="text" placeholder="搜你想搜的" />
+            <button>走你</button>
+        </div>
+    </div>
+    <!-- 脚部 -->
+    <div id="my-foot">
+        浙ICP备17057726号-1
+    </div>
+</body>
+
+</html>

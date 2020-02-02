@@ -1,0 +1,111 @@
+table th,
+table td {
+    padding: 0 0;
+    text-align: center;
+}
+
+body {
+    background-color: #FAFAFA;
+}
+
+#my-top {
+    padding: 2px 3px;
+}
+
+#my-top #clock {
+    float: right;
+    font-family: '微软雅黑';
+    padding: 1px 5px;
+}
+
+#my-body {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+}
+
+#search-log {
+    position: relative;
+    height: 20%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#search-log img {
+    margin: 0px;
+    border: 0px;
+    width: 500px;
+    height: 200px;
+}
+
+#search-bar {
+    position: relative;
+    margin: 0px auto;
+    padding: 1px 0px 1px 1px;
+    border: 1px solid #4876FF;
+    width: 50%;
+    height: 2.5em;
+}
+
+#search-bar img {
+    position: relative;
+    top: -4px;
+    margin: 0px;
+    border: 0px;
+    height: 100%;
+    padding: 0px;
+    vertical-align: middle;
+}
+
+#search-bar select {
+    width: calc(15% - 8px);
+    height: calc(100%);
+    margin-left: 1px;
+    padding-left: 3px;
+    letter-spacing: 2px;
+    border: 0px;
+    border-right: 1px solid #4876FF;
+    top: -1px;
+    position: relative;
+}
+#search-bar select:focus {
+    border: 0px;
+    outline: 0px;
+    border-right: 1px solid #4876FF;
+}
+#search-bar select option {
+    letter-spacing: 2px;
+}
+
+#search-bar input {
+    border: 0px;
+    margin: 0px;
+    width: calc(65% - 1px);
+    height: calc(100% - 1px);
+    line-height: calc(100% - 1px);
+    padding: 2px 4px;
+}
+#search-bar input:focus {
+    border: 0px;
+    outline: 0px;
+}
+#search-bar button {
+    width: calc(15%);
+    height: calc(100% + 2px);
+    top: -1px;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 2px;
+    border: 0px;
+    background-color: #4876FF;
+    position: relative;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+#my-foot {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+}
