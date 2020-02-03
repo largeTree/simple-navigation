@@ -40,6 +40,9 @@ $(function () {
     }
 
     function doSearch(searchToken) {
+        if (!searchToken || searchToken.length == 0) {
+            return;
+        }
         if (!currentSearchUrl) {
             currentSearchUrl = $('#search-bar select option:selected').attr('value');
         }
