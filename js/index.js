@@ -6,7 +6,6 @@ var files = ['./css/thirty/bootstrap.min.css', './css/index.css'];
 LazyLoader.load(files, config.version);
 
 $(function () {
-    var currentSearchUrl;
     $('#search-bar select').bind('change', function ($event) {
         var $option = $($event.currentTarget).children('option:selected');
         var icon = $option.data('icon');
@@ -43,10 +42,7 @@ $(function () {
         if (!searchToken || searchToken.length == 0) {
             return;
         }
-        if (!currentSearchUrl) {
-            currentSearchUrl = $('#search-bar select option:selected').attr('value');
-        }
-        currentSearchUrl = currentSearchUrl.replace('{{word}}', searchToken);
-        window.open(currentSearchUrl, '_blank');
+        var currentSearchUrl = $('#search-bar select option:selected').attr('value');
+        window.open(currentSearchUrl.replace('{{word}}', searchToken), '_blank');
     }
 });
