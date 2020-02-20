@@ -101,6 +101,7 @@ body {
     position: relative;
     cursor: pointer;
     color: #FFFFFF;
+	float: right;
 }
 
 #my-foot {
