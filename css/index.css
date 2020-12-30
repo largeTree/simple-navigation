@@ -109,4 +109,14 @@ body {
     bottom: 0px;
     width: 100%;
     text-align: center;
+    color: #73777a;
+}
+
+#my-foot a {
+    color: #73777a;
+    text-decoration: none;
+}
+
+#my-foot a:hover {
+    color: red;
 }

@@ -28,10 +28,13 @@ var LazyLoader = (function () {
     }
 
     LazyLoader.prototype = {
-        _js: function (src) {
+        _js: function (src, callback) {
             var script = document.createElement('script');
             script.src = src;
             script.async = false;
+            if (callback && typeof callback === 'function') {
+                script.onload = callback();
+            }
             document.head.appendChild(script);
         },
         _css: function (href) {
@@ -47,20 +50,24 @@ var LazyLoader = (function () {
             }
 
             for (var file of files) {
-                if (this.loaded[file]) {
+                if ((typeof file === 'string' && this.loaded[file]) || (file.url && this.loaded[file.url])) {
                     continue;
                 }
                 var method;
+                var url = file;
                 if (typeof file === 'string') {
                     method = file.match(/\.([^.]+)$/)[1];
-                }
-                this.loaded[file] = 1;
-                if (file.indexOf('?') > 0) {
-                    file = file + '&ver=' + ver;
                 } else {
-                    file = file + '?ver=' + ver;
+                    url = file.url;
+                    method = url.match(/\.([^.]+)$/)[1];
                 }
-                this['_' + method](file);
+                this.loaded[url] = 1;
+                if (url.indexOf('?') > 0) {
+                    url = url + '&ver=' + ver;
+                } else {
+                    url = url + '?ver=' + ver;
+                }
+                this['_' + method](url, file.callback);
             }
         }
     }
